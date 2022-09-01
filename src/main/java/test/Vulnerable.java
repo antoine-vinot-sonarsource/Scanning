@@ -27,4 +27,12 @@ public class Vulnerable {
       throw new RuntimeException(e);
     }
   }
+
+  public void myVulnerability4() {
+    try {
+      DriverManager.getConnection("jdbc:derby:memory:myDB;create=true", "login", "");
+    } catch (SQLException e) {
+      throw new RuntimeException(e);
+    }
+  }
 }
