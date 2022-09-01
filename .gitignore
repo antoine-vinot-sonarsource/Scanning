@@ -1,0 +1,31 @@
+# Project exclude paths
+/.gradle/
+# ---- Gradle
+build/
+.gradle/
+.gradletasknamecache
+classes/
+out/
+
+# ---- IntelliJ IDEA
+*.iws
+*.iml
+*.ipr
+.idea/
+.attach_pid*
+out/
+
+# npm logs
+npm-debug.log*
+npm.tar.gz
+yarn-debug.log*
+yarn-error.log*
+
+# ---- Windows
+# Windows image file caches
+Thumbs.db
+# Folder config file
+Desktop.ini
+
+# ---- Linux
+.directory
