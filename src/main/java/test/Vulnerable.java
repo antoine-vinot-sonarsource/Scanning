@@ -39,12 +39,16 @@ public class Vulnerable {
   }
 
   private Path taintVulnerability(final String fileName) { //fileName is user controlled
-    Path parentPath = Paths.get("notUserControlledParameters");
-    Path requestedFilePath = Paths.get("notUserControlledParameters", fileName);
+    Path parentPath = Paths.get(notUserControlledParameters());
+    Path requestedFilePath = Paths.get(notUserControlledParameters(), fileName);
     // security check against hacks like passing '../filename'
     if ( ! parentPath.equals( requestedFilePath.getParent() ) ) {
       throw new IllegalArgumentException("");
     }
     return requestedFilePath;
+  }
+
+  private String notUserControlledParameters() {
+    return "";
   }
 }
