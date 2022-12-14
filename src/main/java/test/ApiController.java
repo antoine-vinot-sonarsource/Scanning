@@ -7,9 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class ApiController
-{
-  static private String targetDirectory = "/path/to/target/directory/";
+public class ApiController {
+  public static String targetDirectory = "/path/to/target/directory/";
 
   @GetMapping(value = "/delete")
   public void delete(@RequestParam("filename") String filename) throws IOException {
