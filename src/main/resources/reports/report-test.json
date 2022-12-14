@@ -1,0 +1,19 @@
+{ "issues": [
+    {
+      "engineId": "test",
+      "ruleId": "rule1",
+      "severity":"BLOCKER",
+      "type":"CODE_SMELL",
+      "primaryLocation": {
+        "message": "Redundant name",
+        "filePath": "src/main/java/test/Vulnerable.java",
+        "textRange": {
+          "startLine": 31,
+          "endLine": 31,
+          "startColumn": 14,
+          "endColumn": 30
+        }
+      },
+      "effortMinutes": 90
+    }
+]}

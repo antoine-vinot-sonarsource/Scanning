@@ -1,0 +1,123 @@
+{
+  "version": "2.1.0",
+  "$schema": "http://json.schemastore.org/sarif-2.1.0-rtm.4",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "XooLint",
+          "informationUri": "https://xoo.example.com",
+          "rules": [
+            {
+              "id": "XooLint:rule1",
+              "shortDescription": {
+                "text": "disallow unused variables"
+              },
+              "helpUri": "https://eslint.org/docs/rules/no-unused-vars",
+              "properties": {
+                "category": "Variables"
+              }
+            },
+            {
+              "id": "XooLint:rule2",
+              "shortDescription": {
+                "text": "disallow unused variables"
+              },
+              "helpUri": "https://eslint.org/docs/rules/no-unused-vars",
+              "properties": {
+                "category": "Variables"
+              }
+            }
+          ]
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "src/File0.xoo"
+          }
+        },
+        {
+          "location": {
+            "uri": "/var/folders/d6/dhgpy0214ss6gjzgkd1qlt1c0000gq/T/junit5933420560798618942/junit10438735403722479829/src/File1.xoo"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///var/folders/d6/dhgpy0214ss6gjzgkd1qlt1c0000gq/T/junit5933420560798618942/junit10438735403722479829/src/File2.xoo"
+          }
+        }
+
+
+      ],
+      "results": [
+        {
+          "level": "error",
+          "message": {
+            "text": "'x' is assigned a value but never used."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/File0.xoo",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 5
+                }
+              }
+            }
+          ],
+          "ruleId": "XooLint:rule1",
+          "ruleIndex": 0
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "'x' is assigned a value but never used."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/var/folders/d6/dhgpy0214ss6gjzgkd1qlt1c0000gq/T/junit5933420560798618942/junit10438735403722479829/src/File1.xoo",
+                  "index": 1
+                },
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 6
+                }
+              }
+            }
+          ],
+          "ruleId": "XooLint:rule2",
+          "ruleIndex": 1
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "'x' is assigned a value but never used."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///var/folders/d6/dhgpy0214ss6gjzgkd1qlt1c0000gq/T/junit5933420560798618942/junit10438735403722479829/src/File2.xoo",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 6
+                }
+              }
+            }
+          ],
+          "ruleId": "XooLint:rule2",
+          "ruleIndex": 1
+        }
+      ]
+    }
+  ]
+}

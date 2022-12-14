@@ -1,0 +1,180 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "codeql",
+          "organization": "GitHub",
+          "semanticVersion": "2.11.2",
+          "rules": []
+        },
+        "extensions": [
+          {
+            "name": "codeql/xoo",
+            "rules": [
+              {
+                "id": "rule1",
+                "name": "XooLint rule 1",
+                "shortDescription": {
+                  "text": "XooLint rule 1"
+                },
+                "defaultConfiguration": {
+                  "enabled": true,
+                  "level": "error"
+                },
+                "properties": {
+                  "problem.severity": "error",
+                  "security-severity": "7.8"
+                }
+              },
+              {
+                "id": "rule2",
+                "name": "XooLint rule 2",
+                "shortDescription": {
+                  "text": "XooLint rule 2"
+                },
+                "defaultConfiguration": {
+                  "enabled": true,
+                  "level": "error"
+                },
+                "properties": {
+                  "problem.severity": "error",
+                  "security-severity": "8.8"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "src/main/java/test/Vulnerable.java",
+            "uriBaseId": "%SRCROOT%",
+            "index": 0
+          }
+        },
+        {
+          "location": {
+            "uri": "src/main/java/test/Vulnerable.java",
+            "uriBaseId": "%SRCROOT%",
+            "index": 1
+          }
+        },
+        {
+          "location": {
+            "uri": "src/main/java/test/Vulnerable.java",
+            "uriBaseId": "%SRCROOT%",
+            "index": 2
+          }
+        }
+      ],
+      "results": [
+        {
+          "ruleId": "rule1",
+          "rule": {
+            "id": "rule1",
+            "index": 0,
+            "toolComponent": {
+              "index": 0
+            }
+          },
+          "message": {
+            "text": "XooLint vulnerability 1"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/main/java/test/Vulnerable.java",
+                  "uriBaseId": "%SRCROOT%",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 31,
+                  "endLine": 31,
+                  "startColumn": 14,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "234237be16538838:1",
+            "primaryLocationStartColumnFingerprint": "8"
+          }
+        },
+        {
+          "ruleId": "rule2",
+          "rule": {
+            "id": "rule2",
+            "index": 1,
+            "toolComponent": {
+              "index": 1
+            }
+          },
+          "message": {
+            "text": "XooLint vulnerability 2"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/main/java/test/Vulnerable.java",
+                  "uriBaseId": "%SRCROOT%",
+                  "index": 1
+                },
+                "region": {
+                  "startLine": 35,
+                  "endLine": 35,
+                  "startColumn": 6,
+                  "endColumn": 11
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "e5803adce97fe385:1",
+            "primaryLocationStartColumnFingerprint": "13"
+          }
+        },
+        {
+          "ruleId": "rule2",
+          "rule": {
+            "id": "rule2",
+            "index": 2,
+            "toolComponent": {
+              "index": 2
+            }
+          },
+          "message": {
+            "text": "XooLint vulnerability 3"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/main/java/test/Vulnerable.java",
+                  "uriBaseId": "%SRCROOT%",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 36,
+                  "endLine": 35,
+                  "startColumn": 6,
+                  "endColumn": 11
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "299e58f168d3d217:1",
+            "primaryLocationStartColumnFingerprint": "8"
+          }
+        }
+      ]
+    }
+  ]
+}
