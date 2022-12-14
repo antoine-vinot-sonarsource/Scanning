@@ -1,15 +1,20 @@
 package test;
 
+import java.io.File;
+import java.io.IOException;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 public class ApiController
 {
-  @GetMapping(value = "/endpoint")
-  public String endpoint(@RequestParam("input") String input)
-  {
-    return input;
+  static private String targetDirectory = "/path/to/target/directory/";
+
+  @GetMapping(value = "/delete")
+  public void delete(@RequestParam("filename") String filename) throws IOException {
+
+    File file = new File(targetDirectory + filename);
+    file.delete();
   }
 }
