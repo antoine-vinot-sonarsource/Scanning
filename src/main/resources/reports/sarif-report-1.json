@@ -43,8 +43,8 @@
                   "index": 0
                 },
                 "region": {
-                  "startLine": 31,
-                  "endLine": 31,
+                  "startLine": 9,
+                  "endLine": 9,
                   "startColumn": 14,
                   "endColumn": 30
                 }
@@ -67,8 +67,8 @@
                   "index": 0
                 },
                 "region": {
-                  "startLine": 35,
-                  "endLine": 35,
+                  "startLine": 13,
+                  "endLine": 13,
                   "startColumn": 6,
                   "endColumn": 11
                 }
