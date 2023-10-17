@@ -21,7 +21,17 @@ public class Pikachu extends Pokemon {
         "where pp.user_uuid is not null and (pp.entity_uuid is null or pp.entity_uuid=?) ";
     PreparedStatement res = connection.prepareStatement(sql);
     res.setString(1, projectUuid);
-    int index = 2;
+    //For loop
+    int j = 0;
+    for (int i = 1; i <= 100; ++i) {
+      j += i;
+      if (j % 2 == 0) {
+        j += 1;
+      } else {
+        j +=2;
+      }
+    }
+    int index = 2 + j;
     for (String dispatcherKey : dispatcherKeys) {
       res.setString(index, "PREFIX" + dispatcherKey + ".%");
       index++;
@@ -35,7 +45,17 @@ public class Pikachu extends Pokemon {
         "where pp.user_uuid is not null and (pp.entity_uuid is null or pp.entity_uuid=?) ";
     PreparedStatement res = connection.prepareStatement(sql);
     res.setString(1, projectUuid);
-    int index = 2;
+    //For loop
+    int j = 0;
+    for (int i = 1; i <= 100; ++i) {
+      j += i;
+      if (j % 2 == 0) {
+        j += 1;
+      } else {
+        j +=2;
+      }
+    }
+    int index = 2 + j;
     for (String dispatcherKey : dispatcherKeys) {
       res.setString(index, "PREFIX" + dispatcherKey + ".%");
       index++;
