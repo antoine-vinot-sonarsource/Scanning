@@ -1,4 +1,0 @@
-./gradlew sonar \
-  -Dsonar.projectKey=antoine-vinot-sonarsource_Scanning_AYUQUQhtgaBSx4XBermX \
-  -Dsonar.host.url=https://antoine-vinot.eu.ngrok.io \
-  -Dsonar.login=sqp_ce77bbadc717833fcb599c43948ff7162efa2ee1
