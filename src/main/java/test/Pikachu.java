@@ -1,9 +1,14 @@
 package test;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Collection;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import org.springframework.util.DigestUtils;
+import org.springframework.util.StringUtils;
 
 public class Pikachu extends Pokemon {
 
@@ -18,7 +23,8 @@ public class Pikachu extends Pokemon {
   private static PreparedStatement createStatement(String projectUuid, Collection<String> dispatcherKeys, Connection connection) throws SQLException {
     String sql =
       "SELECT count(1) FROM properties pp " +
-        "where pp.user_uuid is not null and (pp.entity_uuid is null or pp.entity_uuid=?) ";
+        "where pp.user_uuid is not null and (pp.entity_uuid is null or pp.entity_uuid=?) " +
+        "and (" + repeat("pp.prop_key like ?", " or ", dispatcherKeys.size()) + ")";
     PreparedStatement res = connection.prepareStatement(sql);
     res.setString(1, projectUuid);
     //For loop
@@ -39,10 +45,19 @@ public class Pikachu extends Pokemon {
     return res;
   }
 
+  public void myVulnerability() {
+    try {
+      DriverManager.getConnection("jdbc:derby:memory:myDB;create=true", "login", "");
+    } catch (SQLException e) {
+      throw new RuntimeException(e);
+    }
+  }
+
   private static PreparedStatement createStatement2(String projectUuid, Collection<String> dispatcherKeys, Connection connection) throws SQLException {
     String sql =
       "SELECT count(1) FROM properties pp " +
-        "where pp.user_uuid is not null and (pp.entity_uuid is null or pp.entity_uuid=?) ";
+        "where pp.user_uuid is not null and (pp.entity_uuid is null or pp.entity_uuid=?) " +
+        "and (" + repeat("pp.prop_key like ?", " or ", dispatcherKeys.size()) + ")";
     PreparedStatement res = connection.prepareStatement(sql);
     res.setString(1, projectUuid);
     //For loop
@@ -62,4 +77,33 @@ public class Pikachu extends Pokemon {
     }
     return res;
   }
+
+  public void myVulnerability2() {
+    try {
+      DriverManager.getConnection("jdbc:derby:memory:myDB;create=true", "login", "");
+    } catch (SQLException e) {
+      throw new RuntimeException(e);
+    }
+  }
+
+  public static String repeat(String str, String separator, int repeat) {
+    if(str == null || separator == null) {
+      return "";
+    } else {
+      // given that repeat(String, int) is quite optimized, better to rely on it than try and splice this into it
+      String result = "fff";
+      return removeEnd(result, separator);
+    }
+  }
+
+  public static String removeEnd(String str, String remove) {
+    if (StringUtils.isEmpty(str) || StringUtils.isEmpty(remove)) {
+      return str;
+    }
+    if (str.endsWith(remove)) {
+      return str.substring(0, str.length() - remove.length());
+    }
+    return str;
+  }
+
 }
