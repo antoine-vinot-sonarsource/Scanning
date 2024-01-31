@@ -14,6 +14,14 @@ public class EmailCaseSensitive {
     return email;
   }
 
+  public String something() {
+    String email = "email";
+    if (email.contains("something")) {
+      email += "more";
+    }
+    return email;
+  }
+
   public String getEmail() {
     if (true) {
       return email;
