@@ -8,8 +8,15 @@ public class EmailCaseSensitive {
 
   public String somethingElse() {
     String email = "email";
-    if (email.contains("something")) {
+    if (email.contains("somethingElse")) {
       email += "more";
+    }
+    return email;
+  }
+
+  public String getEmail() {
+    if (true) {
+      return email;
     }
     return email;
   }
