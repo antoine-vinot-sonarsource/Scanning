@@ -21,7 +21,7 @@ on:
 jobs:
   build:
     name: Build
-    runs-on: ubuntu-latest
+    runs-on: somthing
     permissions: read-all
     steps:
       - uses: actions/checkout@v3
