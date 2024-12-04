@@ -7,13 +7,6 @@ java {
     sourceCompatibility = '17'
 }
 
-sonar {
-    properties {
-        property "sonar.projectKey", "antoine-vinot-sonarsource_Scanning_AYyCPVmyMC3uXdxpHdyc"
-        property "sonar.projectName", "Scanning"
-    }
-}
-
 group 'org.example'
 version '1.0-SNAPSHOT'
 
