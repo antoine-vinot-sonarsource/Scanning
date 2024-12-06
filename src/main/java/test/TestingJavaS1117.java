@@ -4,7 +4,7 @@ public class TestingJavaS1117 {
 
   private String myVariable = "something";
 
-  private static final String MORE = "more";
+  private static final String MORE = "More";
 
   public String anotherMethod(String input) {
     if (input.contains("something")) {
