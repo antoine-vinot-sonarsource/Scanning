@@ -7,6 +7,9 @@ jobs:
       - image: 'circleci/python:3.7.4'
     steps:
       - checkout
+      - run:
+          name: Analyze on SonarQube Cloud
+          command: gradle build
       - sonarcloud/scan
 workflows:
   my-workflow:
