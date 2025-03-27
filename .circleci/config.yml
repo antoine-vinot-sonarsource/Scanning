@@ -1,17 +1,15 @@
 version: 2.1
-
+orbs:
+  sonarcloud: sonarsource/sonarcloud@2.0.0
 jobs:
   build:
     docker:
-      - image: 'cimg/openjdk:17.0'
+      - image: 'circleci/python:3.7.4'
     steps:
       - checkout
-      - run:
-          name: Analyze on SonarQube Cloud
-          command: gradle build sonarqube
-
+      - sonarcloud/scan
 workflows:
-  main:
+  my-workflow:
     jobs:
       - build:
-          context: SonarCloud
+          context: sonarcloud
