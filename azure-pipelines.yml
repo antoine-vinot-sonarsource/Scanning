@@ -10,7 +10,17 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+- task: SonarQubePrepare@7
+  inputs:
+    SonarQube: 'Antoine'
+    scannerMode: 'other'
 - task: Gradle@3
   inputs:
     gradleWrapperFile: 'gradlew'  # Path to your Gradle wrapper
     tasks: 'build'  # Replace with the tasks you want to run
+    sonarQubeRunAnalysis: true
+- task: SonarQubePublish@7
+  inputs:
+    pollingTimeoutSec: '300'
+
+
