@@ -5,9 +5,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Collection;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import org.springframework.util.DigestUtils;
 import org.springframework.util.StringUtils;
 
 public class Pikachu extends Pokemon {
