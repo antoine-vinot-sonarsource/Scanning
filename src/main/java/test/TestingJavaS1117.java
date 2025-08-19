@@ -21,4 +21,16 @@ public class TestingJavaS1117 {
     }
     return myVariable;
   }
+
+  public String moreMethod(String input) {
+    String myVariable = "local"; // Shadows the field 'myVariable'
+    if (input == null) {
+      return null;
+    }
+    int unused = 42; // Unused variable
+    if (input.length() > 5) {
+      return myVariable + input.substring(10); // Possible StringIndexOutOfBoundsException
+    }
+    return myVariable;
+  }
 }
