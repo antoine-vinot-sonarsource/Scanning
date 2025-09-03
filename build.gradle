@@ -3,6 +3,16 @@ plugins {
     id "org.sonarqube" version "6.2.0.5505"
 }
 
+sonar {
+  properties {
+    property "sonar.projectKey", "antoine-vinot-sonarsource_scanning"
+    property "sonar.organization", "antoine-vinot-sonarsource"
+    property "sonar.scanner.sonarcloudUrl", "https://dev17.sc-dev17.io"
+    property "sonar.scanner.apiBaseUrl", "https://api.sc-dev17.io"
+    property "sonar.token", "03eef9165a25e9e21871ac2bbcf3bab1221aee63"
+  }
+}
+
 java {
     sourceCompatibility = '17'
 }
