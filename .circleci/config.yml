@@ -9,7 +9,7 @@ jobs:
       - checkout
       - run:
           name: Analyze on SonarQube Cloud
-          command: gradle build
+          command: gradle clean build
       - sonarcloud/scan
 workflows:
   my-workflow:
