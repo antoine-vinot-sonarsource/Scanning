@@ -9,12 +9,12 @@ sonar {
     property "sonar.organization", "antoine-vinot-sonarsource"
     property "sonar.scanner.sonarcloudUrl", "https://dev17.sc-dev17.io"
     property "sonar.scanner.apiBaseUrl", "https://api.sc-dev17.io"
-    property "sonar.token", "03eef9165a25e9e21871ac2bbcf3bab1221aee63"
+    property "sonar.token", "df0fa8a960a0f306082b932145ed1fc08a3325ec"
   }
 }
 
 java {
-    sourceCompatibility = '17'
+    sourceCompatibility = '21'
 }
 
 group 'org.example'
