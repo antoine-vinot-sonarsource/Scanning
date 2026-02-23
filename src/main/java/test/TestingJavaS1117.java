@@ -21,4 +21,12 @@ public class TestingJavaS1117 {
     }
     return myVariable;
   }
+
+  public String someMethodBis(String input) {
+    String myVariable = "myVariable";
+    if (input.contains(MORE)) {
+      myVariable += MORE;
+    }
+    return myVariable;
+  }
 }
