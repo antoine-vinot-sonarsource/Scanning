@@ -3,13 +3,6 @@ plugins {
     id "org.sonarqube" version "7.2.2.6593"
 }
 
-sonar {
-  properties {
-    property "sonar.projectKey", "antoine-vinot-sonarsource_Scanning_1a83f4ac-35b8-4a9d-b0ec-a827d6e918c5"
-    property "sonar.projectName", "Scanning"
-  }
-}
-
 java {
     sourceCompatibility = '17'
 }
