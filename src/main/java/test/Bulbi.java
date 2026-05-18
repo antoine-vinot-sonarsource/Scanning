@@ -11,6 +11,7 @@ public class Bulbi {
   }
 
   public String getType() {
+    System.out.println("Some changes");
     return type;
   }
 }
