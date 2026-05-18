@@ -7,13 +7,6 @@ java {
     sourceCompatibility = '17'
 }
 
-sonar {
-    properties {
-        property "sonar.sources", "C:\\Users\\antoine.vinot\\Dev\\Projects\\Scanning\\src\\main\\java\\pokemon"
-        property "sonar.tests", "C:\\Users\\antoine.vinot\\Dev\\Projects\\Scanning\\src\\main\\java\\pokemon"
-    }
-}
-
 group 'org.example'
 version '1.0-SNAPSHOT'
 
