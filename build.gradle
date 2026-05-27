@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id "org.sonarqube" version "6.2.0.5505"
+    id "org.sonarqube" version "7.2.3.7755"
 }
 
 sonar {
@@ -9,7 +9,7 @@ sonar {
     property "sonar.organization", "antoine-vinot-sonarsource"
     property "sonar.scanner.sonarcloudUrl", "https://dev17.sc-dev17.io"
     property "sonar.scanner.apiBaseUrl", "https://api.sc-dev17.io"
-    property "sonar.token", "f27d3fca39be2dc8fe34f5375c40f256f13241e5"
+    property "sonar.token", "f7a4888029b036930e06df3e7707a96b4e0184ee"
   }
 }
 
