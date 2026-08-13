@@ -9,7 +9,6 @@ sonar {
     property "sonar.organization", "antoine-vinot-sonarsource"
     property "sonar.scanner.sonarcloudUrl", "https://dev17.sc-dev17.io"
     property "sonar.scanner.apiBaseUrl", "https://api.sc-dev17.io"
-    property "sonar.token", "f7a4888029b036930e06df3e7707a96b4e0184ee"
   }
 }
 
